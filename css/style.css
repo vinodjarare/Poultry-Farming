@@ -1,0 +1,45 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Spartan:wght@300&display=swap');
+
+body{
+    font-family: 'Spartan', serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    background-color: #3A6071;
+}
+.carousel-item{
+    width: 100%;
+    height: 70vh;
+}
+.box:hover{
+    
+    transform: scale(1.09);
+}
+.news-letter{
+
+   background-image: url(../images/Website-Banner-2.png);
+}
+.around{
+    justify-content: space-around;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+footer{
+    background-color: #3A6071;;
+}
+ /* about page */
+
+ .breadcrum{
+     min-height: 200px;
+     background-image: url('../images/banner2-3.jpg');
+     background-position: center center;
+ }
+ .text-yellow{
+     color: #f2b434;
+ }
