@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">  
     <title>Contact Us | Poultry Farming</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -27,20 +27,20 @@ function phonenumber()
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Poultry farming</a>
+          <a class="navbar-brand" href="index.php">Poultry Farming</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link "  href="index.html">Home</a>
+                <a class="nav-link "  href="index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="About.html">About</a>
+                <a class="nav-link " href="About.php">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="Education.html">Education</a>
+                <a class="nav-link " href="Education.php">Education</a>
               </li><li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Contact us</a>
               </li>
@@ -55,68 +55,38 @@ function phonenumber()
 
     <div class="breadcrum">
         <h1 class="p-5 text-white">Contact Us</h1>
-        <h6 class="text-yellow ps-5">Home » Contact Us</h6>
+        <h6 class="text-yellow ps-5"><strong><a class="text-yellow" href="index.php">Home</a> » Contact Us </strong> </h6>
     </div>
     <div class="container mt-5 mb-5">
-        <form class="row g-3 needs-validation">
+        <form class="row g-3 needs-validation" method="post" action="querycontroller.php">
             <div class="col-md-6">
               <label for="fname" class="form-label"> First Name</label>
-              <input type="text" name="fname" class="form-control" required>
+              <input type="text" name="ct_fname" class="form-control" placeholder="First Name"  required>
             </div>
             <div class="col-md-6">
                 <label for="fname" class="form-label"> Last Name</label>
-                <input type="text" name="lname" class="form-control" required>
+                <input type="text" name="ct_lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-12">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email" required>
+              <input type="email" class="form-control" id="inputEmail" name="ct_email" placeholder="Enter Email" required>
             </div>
             <div class="col-12">
               <label for="inputmobile" class="form-label">Mobile No.</label>
-              <input type="tel" class="form-control" onchange="phonenumber()" id="inputMobile" placeholder="9876543210" required>
+              <input type="tel" class="form-control" onchange="phonenumber()" id="inputMobile" name="ct_mobile" placeholder="9876543210" required>
             </div>
             <div class="col-md-12 form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="ct_comment" required></textarea>
                 <label for="floatingTextarea">Comments</label>
               </div>
               
             <div class="col-12">
-              <button type="submit" class="btn btn-outline-dark">Sign in</button>
+              <button type="submit" class="btn btn-outline-dark" name="contact">Send</button>
             </div>
           </form>
     </div>
 
 
     
-            <!-- footer -->
-            <footer class="text-white p-4">
-                <div class="row justify-content-evenly">
-                  
-                  <div class="col-md-4 flex flex-column">
-                    <h3>contact us</h3>
-                    <div class="flex-row"><i class="bi bi-geo-alt"></i>
-                    <p>Poultry Farming,<br> aurangabad</p>
-                  </div>
-                    <div class="flex-row">
-                      <i class="bi bi-telephone"></i>
-                      <p>7264005494</p>
-                    </div>
-                    <div class="flex-row">
-                      <i class="bi bi-envelope"></i>
-                      <p>poultryfarming@gmail.com</p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 ">
-                    <h3>follow us</h3>
-                      <h4><i class="bi bi-facebook"></i></h4>
-                      <h4><i class="bi bi-instagram"></i></h4>
-                      <h4><i class="bi bi-github"></i></h4>
-                  </div>
-                </div>
-                <p class="text-center pt-2">copyright &copy 2022 Poultry Farming All Rights Reserved | Privacy Policy</pclass=text-center>
-              </footer>
-
-</body>
-</html>
-
+          <?php include_once('footer.php'); ?>
 
